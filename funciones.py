@@ -12,3 +12,13 @@ def eliminar_tarea(numero):
     else:
         print ("Error al eliminar la tarea, solo se pueden borrar tareas en estado Completado")
     
+
+tareas = []
+def agregar_tarea ():
+    nom_tarea = input("Nombre tarea")
+    est_tarea = "pendiente"
+    tarea = {"Nombre": nom_tarea, "Estado": est_tarea}
+    tareas.append(tarea)
+    print ("Tarea agregada")
+
+
