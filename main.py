@@ -1,6 +1,5 @@
 import funciones as f
 
-
 def menu():
     while True:
         print("------Agenda Tareas------- \n1. Agregar Tarea\n2. Ver Tareas\n3.Marcar tarea como completada\n4.Eliminar tarea\n5. Salir")
