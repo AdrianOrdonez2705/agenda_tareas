@@ -13,7 +13,13 @@ def eliminar_tarea(numero):
     if numero < 1 or numero > len(tareas): 
         print ("esta tarea no existe, revisa de nuevo su numero\n") 
         return 
-    
+
+    copiaTareas = tareas[numero - 1]
+    if copiaTareas ["Estado"] == "Completada":
+        tareas.pop(numero - 1)
+        print ("Tarea eliminada con éxito")
+    else:
+        print ("Error al eliminar la tarea, solo se pueden borrar tareas en estado Completado")
     tareas.pop(numero - 1)
     print("Tarea eliminada con éxito\n")
 
@@ -25,8 +31,7 @@ def completar_tarea():
         "Pendiente" : "En progreso", 
         "En progreso" : "Completada" 
     }
-
-
+    
     for i, tarea in enumerate(tareas):
         print(i+1, tarea["Nombre"], "\t", tarea["Estado"])
 
